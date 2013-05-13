@@ -12,6 +12,7 @@ import com.andrucz.predicate.composite.EveryPredicate;
 import com.andrucz.predicate.string.ContainsPredicate;
 import com.andrucz.predicate.string.EndsWithPredicate;
 import com.andrucz.predicate.string.LowerCasePredicate;
+import com.andrucz.predicate.string.MatchesPredicate;
 import com.andrucz.predicate.string.StartsWithPredicate;
 import com.andrucz.predicate.string.UpperCasePredicate;
 
@@ -98,5 +99,9 @@ public final class Predicates {
 	
 	public static UpperCasePredicate isUpper() {
 		return new UpperCasePredicate();
+	}
+	
+	public static MatchesPredicate matches(String arg) {
+		return new MatchesPredicate(arg);
 	}
 }
